@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import = "java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -35,27 +36,46 @@
                 </div>
             </div>
         </nav>
+        <div>
+            <% ArrayList<String> producto = (ArrayList)request.getAttribute("producto"); %>
+            
+            <%  if(request.getAttribute("mensaje") != null){%>
+                <h3 class="text-center mt-5 mb-5"><%= request.getAttribute("mensaje")%></h3>
+                <%}
+            %>
+            
+            <%  if(producto != null){
+                    for(String pro:producto){%>
+                        <ol class="list-group container mb-3 w-25">
+                            <li class="list-group-item list-group-item-warning text-center"><%=pro%></li>
+                        </ol>
+                    <%}
+                }
+            %>
+        </div>>
         <div class="container mt-5 w-75">
-            <div class="form-floating mb-4">
-                <input class="form-control" id="nombreProducto" name="nombreProducto" type="text" placeholder="">
-                <label for="nombreProducto">Nombre del Producto</label>
-            </div>
-            <div class="form-floating mb-4">
-                <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" placeholder=""></textarea>
-                <label for="descripcionProducto">Descripción del Producto</label>
-            </div>
-            <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="marcaProducto" name="marcaProducto" placeholder="">
-                <label for="marcaProducto">Marca del Producto</label>
-            </div>
-            <div class="input-group mb-4">
-                <span class="input-group-text">Q</span>
-                <input type="text" class="form-control">
-                <span class="input-group-text">.00</span>
-            </div>
-            <div>
-                <input class="btn btn-success" type="submit">
-            </div>
+            <form action="/SGBDProductosIN5CM/producto-servlet/" method="post" enctype="multipart/form-data">
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="nombreProducto" name="nombreProducto" type="text" placeholder="">
+                    <label for="nombreProducto">Nombre del Producto</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" placeholder=""></textarea>
+                    <label for="descripcionProducto">Descripción del Producto</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="marcaProducto" name="marcaProducto" placeholder="">
+                    <label for="marcaProducto">Marca del Producto</label>
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text">Q</span>
+                    <input type="text" class="form-control" id="precioProducto" name="precioProducto">
+                    <span class="input-group-text">.00</span>
+                </div>
+                <div>
+                    <input class="btn btn-success" type="submit" value="Agregar">
+                </div>
+            </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
