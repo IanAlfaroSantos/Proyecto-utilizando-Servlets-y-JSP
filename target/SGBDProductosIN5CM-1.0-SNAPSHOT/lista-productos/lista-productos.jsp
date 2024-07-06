@@ -35,6 +35,62 @@
                 </div>
             </div>
         </nav>
+        <div class="container mt-5">
+            <table class="table" border="2px">
+                <thead>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger">#</th>
+                        <th class="text-center text-bg-dark text-danger">Nombre</th>
+                        <th class="text-center text-bg-dark text-danger">Descripción</th>
+                        <th class="text-center text-bg-dark text-danger">Marca</th>
+                        <th class="text-center text-bg-dark text-danger">Precio</th>
+                        <th class="text-center text-bg-dark text-danger">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="row">1</th>
+                        <td class="text-center text-bg-secondary">Coca-Cola</td>
+                        <td class="text-center text-bg-secondary">Soda 2.5Lt</td>
+                        <td class="text-center text-bg-secondary">Coca-Cola</td>
+                        <td class="text-center text-bg-secondary">Q19.00</td>
+                        <td class="text-center text-bg-secondary"><img src="../assets/image/CocaCola.png" alt="Coca-Cola" width="200" height="200" title="Coca-Cola"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="row">2</th>
+                        <td class="text-center text-bg-secondary">Manias Japonesas</td>
+                        <td class="text-center text-bg-secondary">Docena de Manias con cascara</td>
+                        <td class="text-center text-bg-secondary">Diana</td>
+                        <td class="text-center text-bg-secondary">Q10.00</td>
+                        <td class="text-center text-bg-secondary"><img src="../assets/image/ManiaJaponesa.png" alt="Manias Japonesas" width="150" height="200" title="Manias Japonesas"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="row">3</th>
+                        <td class="text-center text-bg-secondary">Concentrado para perros</td>
+                        <td class="text-center text-bg-secondary">Costal de concentrado</td>
+                        <td class="text-center text-bg-secondary">Rambocan</td>
+                        <td class="text-center text-bg-secondary">Q204.10</td>
+                        <td class="text-center text-bg-secondary"><img src="../assets/image/ConcentradoRambocan.png" alt="Concentrado Rambocan" width="90" height="170" title="Concentrado Rambocan"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="row">4</th>
+                        <td class="text-center text-bg-secondary">Jabon para trastes</td>
+                        <td class="text-center text-bg-secondary">Bote de Jabon 800g</td>
+                        <td class="text-center text-bg-secondary">Zagaz</td>
+                        <td class="text-center text-bg-secondary">Q9.92</td>
+                        <td class="text-center text-bg-secondary"><img src="../assets/image/JabonZagaz.png" alt="Jabon Zagaz" width="320" height="170" title="Jabon Zagaz"></td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="row">5</th>
+                        <td class="text-center text-bg-secondary">Azucar</td>
+                        <td class="text-center text-bg-secondary">Bolsa de azucar 5.43Lb</td>
+                        <td class="text-center text-bg-secondary">Caña real</td>
+                        <td class="text-center text-bg-secondary">Q19.80</td>
+                        <td class="text-center text-bg-secondary"><img src="../assets/image/Azucar.png" alt="Azucar caña real" width="170" height="170" title="Azucar caña real"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

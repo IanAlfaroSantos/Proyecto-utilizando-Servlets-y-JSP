@@ -36,7 +36,7 @@
             </div>
         </nav>
         <div class="container d-flex justify-content-center mt-5">
-            <img class="w-75 border border-3 border-black border-opacity-50 rounded" src="assets/image/Kinal.jpeg">
+            <img class="w-75 border border-3 border-black border-opacity-50 rounded" src="assets/image/Kinal.jpeg" alt="Fundacion Kinal" title="Fundacion Kinal">
         </div>
         <div>
             <h1 class="display-5 text-center">Sistema de gestión de productos</h1>
