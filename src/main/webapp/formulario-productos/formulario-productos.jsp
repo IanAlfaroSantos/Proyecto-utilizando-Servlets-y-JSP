@@ -11,7 +11,7 @@
     <body>
         <nav class="position-relative navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.jsp">Sistema de gestión de inventarios</a>
+                <a class="navbar-brand" href="./index.jsp">Sistema de gestión de inventarios</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,10 +26,10 @@
                                 <a class="nav-link" href="../index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="formulario-productos.jsp">Formulario de Productos</a>
+                                <a class="nav-link active" href="./formulario-productos.jsp">Formulario de Productos</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="../lista-productos/lista-productos.jsp">Lista de Productos</a>
+                                <a class="nav-link" href="../producto-servlet">Lista de Productos</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
             %>
         </div>>
         <div class="container mt-5 w-75">
-            <form action="/SGBDProductosIN5CM/producto-servlet/" method="post" enctype="multipart/form-data">
+            <form action="/SGBDProductosIN5CM/producto-servlet" method="post" enctype="multipart/form-data">
                 <div class="form-floating mb-4">
                     <input class="form-control" id="nombreProducto" name="nombreProducto" type="text" placeholder="">
                     <label for="nombreProducto">Nombre del Producto</label>

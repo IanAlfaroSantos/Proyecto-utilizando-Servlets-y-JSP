@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="org.ianalfaro.webapp.model.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +12,7 @@
     <body>
         <nav class="position-relative navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.jsp">Sistema de gestión de inventarios</a>
+                <a class="navbar-brand" href="./index.jsp">Sistema de gestión de inventarios</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -22,13 +24,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="../index.jsp">Inicio</a>
+                                <a class="nav-link" href="./index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../formulario-productos/formulario-productos.jsp">Formulario de Productos</a>
+                                <a class="nav-link" href="./formulario-productos/formulario-productos.jsp">Formulario de Productos</a>
                             </li>
                             <li>
-                                <a class="nav-link active" href="lista-productos.jsp">Lista de Productos</a>
+                                <a class="nav-link active" href="./producto-servlet">Lista de Productos</a>
                             </li>
                         </ul>
                     </div>
@@ -48,46 +50,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="row">1</th>
-                        <td class="text-center text-bg-secondary">Coca-Cola</td>
-                        <td class="text-center text-bg-secondary">Soda 2.5Lt</td>
-                        <td class="text-center text-bg-secondary">Coca-Cola</td>
-                        <td class="text-center text-bg-secondary">Q19.00</td>
-                        <td class="text-center text-bg-secondary"><img src="../assets/image/CocaCola.png" alt="Coca-Cola" width="200" height="200" title="Coca-Cola"></td>
-                    </tr>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="row">2</th>
-                        <td class="text-center text-bg-secondary">Manias Japonesas</td>
-                        <td class="text-center text-bg-secondary">Docena de Manias con cascara</td>
-                        <td class="text-center text-bg-secondary">Diana</td>
-                        <td class="text-center text-bg-secondary">Q10.00</td>
-                        <td class="text-center text-bg-secondary"><img src="../assets/image/ManiaJaponesa.png" alt="Manias Japonesas" width="150" height="200" title="Manias Japonesas"></td>
-                    </tr>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="row">3</th>
-                        <td class="text-center text-bg-secondary">Concentrado para perros</td>
-                        <td class="text-center text-bg-secondary">Costal de concentrado</td>
-                        <td class="text-center text-bg-secondary">Rambocan</td>
-                        <td class="text-center text-bg-secondary">Q204.10</td>
-                        <td class="text-center text-bg-secondary"><img src="../assets/image/ConcentradoRambocan.png" alt="Concentrado Rambocan" width="90" height="170" title="Concentrado Rambocan"></td>
-                    </tr>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="row">4</th>
-                        <td class="text-center text-bg-secondary">Jabon para trastes</td>
-                        <td class="text-center text-bg-secondary">Bote de Jabon 800g</td>
-                        <td class="text-center text-bg-secondary">Zagaz</td>
-                        <td class="text-center text-bg-secondary">Q9.92</td>
-                        <td class="text-center text-bg-secondary"><img src="../assets/image/JabonZagaz.png" alt="Jabon Zagaz" width="320" height="170" title="Jabon Zagaz"></td>
-                    </tr>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="row">5</th>
-                        <td class="text-center text-bg-secondary">Azucar</td>
-                        <td class="text-center text-bg-secondary">Bolsa de azucar 5.43Lb</td>
-                        <td class="text-center text-bg-secondary">Caña real</td>
-                        <td class="text-center text-bg-secondary">Q19.80</td>
-                        <td class="text-center text-bg-secondary"><img src="../assets/image/Azucar.png" alt="Azucar caña real" width="170" height="170" title="Azucar caña real"></td>
-                    </tr>
+                    <% List<Producto> productos = (List)request.getAttribute("productos"); %>
+                    <% 
+                        for(Producto producto:productos){ %>
+                        <tr>
+                            <th class="text-center text-bg-dark text-danger" scope="row"><%=producto.getProductoId()%></th>
+                            <td class="text-center text-bg-secondary text-light" ><%=producto.getNombreProducto()%></td>
+                            <td class="text-center text-bg-secondary text-light"><%=producto.getDescripcionProducto()%></td>
+                            <td class="text-center text-bg-secondary text-light"><%=producto.getMarcaProducto()%></td>
+                            <td class="text-center text-bg-secondary text-light"><%=producto.getPrecioProducto()%></td>
+                            <td class="text-center text-bg-secondary"></td>
+                        </tr>
+                        <% }
+                    %>
                 </tbody>
             </table>
         </div>

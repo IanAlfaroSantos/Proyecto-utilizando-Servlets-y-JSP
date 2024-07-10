@@ -1,1 +1,6 @@
+org\ianalfaro\webapp\model\Producto.class
+Main.class
 org\ianalfaro\webapp\servlet\ProductoServlet.class
+org\ianalfaro\webapp\service\IProductoService.class
+org\ianalfaro\webapp\service\ProductoService.class
+org\ianalfaro\webapp\util\JpaUtil.class
